@@ -4,16 +4,13 @@
 //p: split them, iterate into numbers, sort from highest to lowest, pull out first and last index
 
 function highAndLow(numbers) {
-  const reordered = numbers
-    .split(' ')
-    .map(Number)
-    .sort((a, b) => b - a)
-    .toString();
+  const numberArray = numbers.split(' ').map(Number);
 
-  const firstAndLast = `${reordered[0]} ${reordered[reordered.length - 1]}`;
+  // Find the highest and lowest numbers
+  const highest = Math.max(...numberArray);
+  const lowest = Math.min(...numberArray);
 
-  return firstAndLast.toString();
+  return `${highest} ${lowest}`;
 }
-
 const result = highAndLow('1 2 5 3');
 console.log(result);
