@@ -8,4 +8,5 @@ const greet = (name) => {
 };
 
 const result = greet('jAcob');
+const result2 = greet('jAcob');
 console.log(result);
