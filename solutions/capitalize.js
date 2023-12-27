@@ -4,20 +4,15 @@
 //p: loop through the string and capitalize the even chars, push to a variable. again with the odds and then return the variable
 
 function capitalize(s) {
-  let arr = [];
-  let even = s
-    .split('')
-    .map((char, index) => (index % 2 === 0 ? char.toUpperCase() : char))
-    .join('');
-  arr.push(even);
-
-  let odd = s
-    .split('')
-    .map((char, index) => (index % 2 !== 0 ? char.toUpperCase() : char))
-    .join('');
-  arr.push(odd);
-  return arr;
-  //   return arr;
+	const oddCapitals = s
+		.split('')
+		.map((letter, i) => (i % 2 === 0 ? letter.toUpperCase() : letter))
+		.join('');
+	const evenCapitals = s
+		.split('')
+		.map((letter, i) => (i % 2 !== 0 ? letter.toUpperCase() : letter))
+		.join('');
+	return [oddCapitals, evenCapitals];
 }
 
 const result = capitalize('codewars');
