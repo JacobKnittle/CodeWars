@@ -4,13 +4,13 @@
 
 function movie(card, ticket, perc) {
 	// ceil(price of System B) < price of System A.
-	let individualTicketsTotal = ticket;
-	let cardTotal = card + ticket * perc;
+	let individualTicketsTotal = 0;
+	let cardTotal = card;
 
-	let numofPurchases = 1;
+	let numofPurchases = 0;
 
 	for (
-		let i = 2;
+		let i = 1;
 		Math.ceil(cardTotal) >= Math.ceil(individualTicketsTotal);
 		i++
 	) {
